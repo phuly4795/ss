@@ -1,0 +1,230 @@
+ <main>
+        <!--? slider Area Start-->
+        <section class="slider-area ">
+            <div class="slider-active">
+                <!-- Single Slider -->
+                <div class="single-slider slider-height d-flex align-items-center">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-xl-6 col-lg-7 col-md-12">
+                                <div class="hero__caption">
+                                    <h1 data-animation="fadeInLeft" data-delay="0.2s">Thi trực tuyến với<br>QuizN4</h1>
+                                    <p data-animation="fadeInLeft" data-delay="0.4s">Xây dựng kỹ năng với các khóa học,
+                                        chứng chỉ và bằng cấp trực tuyến từ các trường đại học và công ty đẳng cấp thế
+                                        giới</p>
+                                    <a href="#/!courses" class="btn hero-btn" data-animation="fadeInLeft"
+                                        data-delay="0.7s">Xem ngay</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- ? services-area -->
+        <div class="services-area">
+            <div class="container">
+                <div class="row justify-content-sm-center">
+                    <div class="col-lg-4 col-md-6 col-sm-8">
+                        <div class="single-services mb-30">
+                            <div class="features-icon">
+                                <img src="assets/img/icon/icon1.svg" alt="">
+                            </div>
+                            <div class="features-caption">
+                                <h3>Hơn 60 khóa học khác nhau</h3>
+                                <p>Quá trình tự động hóa tất cả các tác vụ trang web của bạn.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-sm-8">
+                        <div class="single-services mb-30">
+                            <div class="features-icon">
+                                <img src="assets/img/icon/icon2.svg" alt="">
+                            </div>
+                            <div class="features-caption">
+                                <h3>Được hỗ trợ về các kiến thức</h3>
+                                <p>Quá trình tự động hóa tất cả các tác vụ trang web của bạn.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-sm-8">
+                        <div class="single-services mb-30">
+                            <div class="features-icon">
+                                <img src="assets/img/icon/icon3.svg" alt="">
+                            </div>
+                            <div class="features-caption">
+                                <h3>Thi trực tuyến với thời gian thực</h3>
+                                <p>Quá trình tự động hóa tất cả các tác vụ trang web của bạn.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Courses area start -->
+        <div class="section-tittle text-center mb-55">
+            <h2>Các khóa học nổi bật</h2>
+        </div>
+
+        <div class="col-sm-12" ng-controller="subjectsCtrl">
+            <div class="row">
+               <div class="col-sm-3" ng-repeat="sub in list_subject | limitTo: 8">
+                <div class="card" style="margin-top: 3%;">
+                    <img src="images/logos/{{sub.Logo}}" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h3 class="card-title"><a href="./quiz.html">{{sub.Name}}</a></h3>
+                      <a href="#!quiz/{{sub.Id}}/{{sub.Name}}" class="border-btn border-btn2"> Thi ngay</a>
+                    </div>
+                  </div>
+               </div>
+            </div>
+       </div>
+        <!-- Courses area End -->
+        <!--? About Area-1 Start -->
+        <section class="about-area1 fix pt-10">
+            <div class="support-wrapper align-items-center">
+                <div class="left-content1">
+                    <div class="about-icon">
+                        <img src="assets/img/icon/about.svg" alt="">
+                    </div>
+                    <!-- section tittle -->
+                    <div class="section-tittle section-tittle2 mb-55">
+                        <div class="front-text">
+                            <h2 class="">Học các kiến thức</h2>
+                            <p> Quy trình tự động hóa tất cả các tác vụ trang web của bạn. Khám phá các công cụ và kỹ
+                                thuật để tương tác hiệu quả với trẻ em và thanh niên dễ bị tổn thương. </p>
+                        </div>
+                    </div>
+                    <div class="single-features">
+                        <div class="features-icon">
+                            <img src="assets/img/icon/right-icon.svg" alt="">
+                        </div>
+                        <div class="features-caption">
+                            <p>Các kỹ thuật để tương tác hiệu quả với trẻ em và thanh niên dễ bị tổn thương.</p>
+                        </div>
+                    </div>
+                    <div class="single-features">
+                        <div class="features-icon">
+                            <img src="assets/img/icon/right-icon.svg" alt="">
+                        </div>
+                        <div class="features-caption">
+                            <p>Tham gia cùng hàng triệu người từ khắp nơi trên thế giới cùng nhau học tập.</p>
+                        </div>
+                    </div>
+
+                    <div class="single-features">
+                        <div class="features-icon">
+                            <img src="assets/img/icon/right-icon.svg" alt="">
+                        </div>
+                        <div class="features-caption">
+                            <p>Tham gia cùng hàng triệu người từ khắp nơi trên thế giới cùng nhau học tập. Học trực
+                                tuyến dễ dàng và tự nhiên.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="right-content1">
+                    <!-- img -->
+                    <div class="right-img">
+                        <img src="assets/img/gallery/about.png" alt="">
+
+                        <div class="video-icon">
+                            <a class="popup-video btn-icon" href="https://www.youtube.com/watch?v=up68UAfH0d0"><i
+                                    class="fas fa-play"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- About Area End -->
+        <!--? About Area-3 Start -->
+        <section class="about-area3 fix">
+            <div class="support-wrapper align-items-center">
+                <div class="right-content3">
+                    <!-- img -->
+                    <div class="right-img">
+                        <img src="assets/img/gallery/about3.png" alt="">
+                    </div>
+                </div>
+                <div class="left-content3">
+                    <!-- section tittle -->
+                    <div class="section-tittle section-tittle2 mb-20">
+                        <div class="front-text">
+                            <h2 class="">Kết quả của người học về các khóa học bạn sẽ tham gia</h2>
+                        </div>
+                    </div>
+                    <div class="single-features">
+                        <div class="features-icon">
+                            <img src="assets/img/icon/right-icon.svg" alt="">
+                        </div>
+                        <div class="features-caption">
+                            <p>Các kỹ thuật để tương tác hiệu quả với trẻ em và thanh niên dễ bị tổn thương.</p>
+                        </div>
+                    </div>
+                    <div class="single-features">
+                        <div class="features-icon">
+                            <img src="assets/img/icon/right-icon.svg" alt="">
+                        </div>
+                        <div class="features-caption">
+                            <p>Tham gia cùng hàng triệu người từ khắp nơi trên thế giới cùng nhau học tập.</p>
+                        </div>
+                    </div>
+
+                    <div class="single-features">
+                        <div class="features-icon">
+                            <img src="assets/img/icon/right-icon.svg" alt="">
+                        </div>
+                        <div class="features-caption">
+                            <p>Tham gia cùng hàng triệu người từ khắp nơi trên thế giới cùng nhau học tập. Học trực
+                                tuyến dễ dàng và tự nhiên.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- About Area End -->
+        <!--? Team -->
+        <section class="team-area section-padding40 fix">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-xl-7 col-lg-8">
+                        <div class="section-tittle text-center mb-55">
+                            <h2>Cách thành viên của nhóm</h2>
+                        </div>
+                    </div>
+                </div>
+                <div class="team-active">
+                    <div class="single-cat text-center">
+                     
+                        <div class="cat-cap">
+                            <h5><a href="services.html">Lý Thành Phú</a></h5>
+                            <p>Phụ trách làm quiz</p>
+                        </div>
+                    </div>
+                    <div class="single-cat text-center">
+                      
+                        <div class="cat-cap">
+                            <h5><a href="services.html">Trần Hoàng Khôi</a></h5>
+                            <p>Phụ trách quiz</p>
+                        </div>
+                    </div>
+                    <div class="single-cat text-center">
+                     
+                        <div class="cat-cap">
+                            <h5><a href="services.html">Nguyễn Hoàng Giang</a></h5>
+                            <p>Phụ trách quên mật khẩu, cập nhật thông tin</p>
+                        </div>
+                    </div>
+                    <div class="single-cat text-center">
+                      
+                        <div class="cat-cap">
+                            <h5><a href="services.html">Dương Thành Đạt</a></h5>
+                            <p>Phụ trách đăng nhập, đăng ký</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+        <!-- Services End -->
+
+    </main>

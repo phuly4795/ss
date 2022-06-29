@@ -1,0 +1,224 @@
+
+    <div class="quiz-block" ng-show="!inProgess">
+        <div class="quiz-time">
+            <span>Bài Thi</span>
+        </div>
+     
+        <div class="quiz-btn__finit">
+            <button id="btnStart" class="btn btn2 quiz-btn__finit-item" ng-click="start()">Bắt đầu bài thi</button>
+        </div>
+    </div>
+
+
+
+
+
+    <div class="quiz-block" ng-show="inProgess">
+        <div class="quiz-block" ng-show="quizOver">
+            <div class="quiz-time">
+                <span>Kết thúc bài thi</span>
+            </div>
+            <div class="quiz-content">
+                <div class="quiz-content__header">
+                    <p>Bạn đã thi: {{result}} </p>
+                  
+                </div>
+                <div class="quiz-content__ques">
+                    <div class="quiz-content__ques-ask">
+                        <h4>Số điểm của bạn:{{mark}}</h4>
+                    </div>
+                </div>
+            </div>
+            <div class="quiz-btn__finit">
+                <a href="#/!courses" class="btn btn2 quiz-btn__finit-item">Quay về khóa học</a>
+            </div>
+        </div>
+        <div ng-show="!quizOver" ng-controller="TimeQuiz">
+            <div class="quiz-time">
+                <span ng-model="dh">00:{{time}}</span>
+            </div>
+    
+            <div class="quiz-content">
+                <div class="quiz-content__header">
+                    
+                    <p>{{subjectName}}</p>
+                    <!-- <p>Điểm: {{score}}/10</p> -->
+                    <p><span id="numAns" >{{c}}</span>/10</p>
+                </div>
+    
+                <div class="quiz-content__ques">
+                    <div id="quizBlock" class="carousel slide" data-ride="carousel" data-interval="0">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <div class="quiz-content__ques-ask">
+                                    <h4>{{listQuestions[0].Text}}</h4>
+                                </div>
+                
+                                <div class="quiz-content__ques-block" ng-repeat ="option in listQuestions[0].Answers">
+                                    <label class="quiz-content__ques-item">
+                                        <input type="radio" index="1" class="quiz-content__ques-input" name="{{listQuestions[0].AnswerId}}" value="{{option.Id}}">
+
+                                        <!-- <input type="radio" index="{{listQuestions[0].Id}}" class="quiz-content__ques-input" name="{{answer}}" ng-if="{{listAns[0]}} != {{option.Id}}" value="{{option.Id}}"> -->
+                                        {{option.Text}}
+                                    </label>
+                                 
+                                </div>
+                            </div>
+
+                            <div class="carousel-item">
+                                <div class="quiz-content__ques-ask">
+                                    <h4>{{listQuestions[1].Text}}</h4>
+                                </div>
+                
+                                <div class="quiz-content__ques-block" ng-repeat ="option in listQuestions[1].Answers">
+                                    <label class="quiz-content__ques-item">
+                                        <input type="radio" class="quiz-content__ques-input" name="{{listQuestions[1].AnswerId}}"value="{{option.Id}}">
+                                        {{option.Text}}
+                                    </label>
+                                 
+                                </div>
+                            </div>
+
+                            <div class="carousel-item">
+                                <div class="quiz-content__ques-ask">
+                                    <h4>{{listQuestions[2].Text}}</h4>
+                                </div>
+                
+                                <div class="quiz-content__ques-block" ng-repeat ="option in listQuestions[2].Answers">
+                                    <label class="quiz-content__ques-item">
+                                        <input type="radio" class="quiz-content__ques-input" name="{{listQuestions[2].AnswerId}}"value="{{option.Id}}">
+                                        {{option.Text}}
+                                    </label>
+                                 
+                                </div>
+                            </div>
+
+                            <div class="carousel-item">
+                                <div class="quiz-content__ques-ask">
+                                    <h4>{{listQuestions[3].Text}}</h4>
+                                </div>
+                
+                                <div class="quiz-content__ques-block" ng-repeat ="option in listQuestions[3].Answers">
+                                    <label class="quiz-content__ques-item">
+                                        <input type="radio" class="quiz-content__ques-input" name="{{listQuestions[3].AnswerId}}"value="{{option.Id}}">
+                                        {{option.Text}}
+                                    </label>
+                                 
+                                </div>
+                            </div>
+
+                            <div class="carousel-item">
+                                <div class="quiz-content__ques-ask">
+                                    <h4>{{listQuestions[4].Text}}</h4>
+                                </div>
+                
+                                <div class="quiz-content__ques-block" ng-repeat ="option in listQuestions[4].Answers">
+                                    <label class="quiz-content__ques-item">
+                                        <input type="radio" class="quiz-content__ques-input" name="{{listQuestions[4].AnswerId}}"value="{{option.Id}}">
+                                        {{option.Text}}
+                                    </label>
+                                 
+                                </div>
+                            </div>
+
+                            <div class="carousel-item">
+                                <div class="quiz-content__ques-ask">
+                                    <h4>{{listQuestions[5].Text}}</h4>
+                                </div>
+                
+                                <div class="quiz-content__ques-block" ng-repeat ="option in listQuestions[5].Answers">
+                                    <label class="quiz-content__ques-item">
+                                        <input type="radio" class="quiz-content__ques-input" name="{{listQuestions[5].AnswerId}}"value="{{option.Id}}">
+                                        {{option.Text}}
+                                    </label>
+                                 
+                                </div>
+                            </div>
+
+                            <div class="carousel-item">
+                                <div class="quiz-content__ques-ask">
+                                    <h4>{{listQuestions[6].Text}}</h4>
+                                </div>
+                
+                                <div class="quiz-content__ques-block" ng-repeat ="option in listQuestions[6].Answers">
+                                    <label class="quiz-content__ques-item">
+                                        <input type="radio" class="quiz-content__ques-input" name="{{listQuestions[6].AnswerId}}"value="{{option.Id}}">
+                                        {{option.Text}}
+                                    </label>
+                                 
+                                </div>
+                            </div>
+
+                            <div class="carousel-item">
+                                <div class="quiz-content__ques-ask">
+                                    <h4>{{listQuestions[7].Text}}</h4>
+                                </div>
+                
+                                <div class="quiz-content__ques-block" ng-repeat ="option in listQuestions[7].Answers">
+                                    <label class="quiz-content__ques-item">
+                                        <input type="radio" class="quiz-content__ques-input" name="{{listQuestions[7].AnswerId}}"value="{{option.Id}}">
+                                        {{option.Text}}
+                                    </label>
+                                 
+                                </div>
+                            </div>
+
+                            <div class="carousel-item">
+                                <div class="quiz-content__ques-ask">
+                                    <h4>{{listQuestions[8].Text}}</h4>
+                                </div>
+                
+                                <div class="quiz-content__ques-block" ng-repeat ="option in listQuestions[8].Answers">
+                                    <label class="quiz-content__ques-item">
+                                        <input type="radio" class="quiz-content__ques-input" name="{{listQuestions[8].AnswerId}}"value="{{option.Id}}">
+                                        {{option.Text}}
+                                    </label>
+                                 
+                                </div>
+                            </div>
+
+                            <div class="carousel-item">
+                                <div class="quiz-content__ques-ask">
+                                    <h4>{{listQuestions[9].Text}}</h4>
+                                </div>
+                
+                                <div class="quiz-content__ques-block" ng-repeat ="option in listQuestions[9].Answers">
+                                    <label class="quiz-content__ques-item">
+                                        <input type="radio" class="quiz-content__ques-input" index="1" name="{{listQuestions[9].AnswerId}}"value="{{option.Id}}">
+                                        {{option.Text}}
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                      </div>
+                    
+                </div>
+    
+                <div class="quiz-content__footer" >
+                    <!-- <div ng-show= "answerMode">
+                        <button class="btn btn-quiz__control" ng-click ="checkAnswer()">Xác nhận </button>
+                    </div> -->
+                    <div class="btn-ctrl__group">
+                        <button class="btn btn-quiz__control" ng-click="countNumAnsPrev()"  type="button" data-target="#quizBlock" data-slide="prev">Trở lại</button>
+                        <button class="btn btn-quiz__control" ng-click ="addAnswer()"  type="button" data-target="#quizBlock" data-slide="next">Câu tiếp theo </button>
+
+                    </div>
+
+                    <!-- <div ng-show= "!answerMode">
+                        <button class="btn btn-quiz__control" ng-click="nextQuestion()"> Câu tiếp theo
+                            <i class="quiz-icon-control ti-hand-point-right"></i>
+                        </button>
+                        <span ng-show="correctAns">Đúng!</span>
+                        <span ng-show="!correctAns">Sai!</span>
+                   </div> -->
+                </div>
+            </div>
+            <div class="quiz-btn__finit" ng-show="freques">
+                <button class="btn btn2 quiz-btn__finit-item" ng-click="handInQuizz()">Nộp bài</button>
+            </div>
+        </div>
+
+    </div>
+
+
+    

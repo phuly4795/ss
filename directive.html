@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./js/angular.min.js"></script>
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="assets/css/slicknav.css">
+    <link rel="stylesheet" href="assets/css/animate.min.css">
+    <link rel="stylesheet" href="assets/css/hamburgers.min.css">
+    <link rel="stylesheet" href="assets/css/magnific-popup.css">
+    <link rel="stylesheet" href="assets/css/fontawesome-all.min.css">
+    <link rel="stylesheet" href="assets/css/themify-icons.css">
+    <link rel="stylesheet" href="assets/css/themify-icons.css">
+    <link rel="stylesheet" href="assets/css/slick.css">
+    <link rel="stylesheet" href="assets/css/nice-select.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/add.css">
+</head>
+<body ng-app ="myapp">
+    <hello-world></hello-world>
+    <div good-bye></div>
+    <div class="hi"></div>
+    <!-- directive: comment -->
+
+    <my-subject></my-subject>
+
+    <script>
+        var app = angular.module("myapp",[]);
+        app.directive("helloWorld", function(){
+            return{
+                restrict: "E", //element
+                template: "<h1>Hello Angular JS Directive</h1>" 
+            };
+        })
+        app.directive("goodBye", function(){
+            return{
+                restrict: "A", //atriblue
+            
+                template: "<h1>Good bye!</h1>" 
+            };
+        })
+        app.directive("hi", function(){
+            return{
+                restrict: "C", //class
+                template: "<h1>Huy Cute đẹp trai vô đối, thôn gminh nhất hệ mặt trời!</h1>" 
+            };
+        })
+
+        app.directive("comment", function(){
+            return{
+                restrict: "M", //Comment
+                replace:true,
+                template: "<h1>Comment!</h1>" 
+            };
+        })
+        app.directive("mySubject", function(){
+            return{
+                restrict: "E", //element        
+                templateUrl: "templace.html" 
+            };
+        })
+
+    </script>
+</body>
+</html>

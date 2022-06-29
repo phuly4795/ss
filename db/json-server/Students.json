@@ -1,0 +1,29 @@
+﻿{
+    "user": [
+      {
+        "name": "thành đạt",
+        "email": "kiznduong@gmail.com",
+        "password": "1",
+        "id": 3
+      },
+      {
+        "name": "duongthanhdat",
+        "email": "kinzduong@gmail.com",
+        "password": "23456789",
+        "id": 4
+      },
+      {
+        "name": "thanh day",
+        "email": "dasdd@gmail.com",
+        "password": "123456",
+        "id": 9
+      },
+      {
+        "name": "Thành Phú",
+        "email": "phuly4795@gmail.com",
+        "password": "1",
+        "id": 10
+      }
+    
+    ]
+  }
